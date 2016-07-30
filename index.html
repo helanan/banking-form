@@ -19,13 +19,13 @@
 <legend><span class="number">1</span> Applicant Information:</legend>
 
 <label for="name">First Name:</label>
-<input type="text" id="name" name="applicant_fname">
+<input type="text" id="name" name="applicant_fname" placeholder="First Name">
 
-<label for="name">Middle initial:</label>
-<input type="text" id="name" name="applicant_mname">
+<label for="name">Middle Initial:</label>
+<input type="text" id="name" name="applicant_mname" placeholder="Middle Initial" size="30">
 
 <label for="name">Last Name:</label>
-<input type="text" id="name" name="applicant_lname">
+<input type="text" id="name" name="applicant_lname" placeholder="Last Name">
 
 <label for="address">Home Address:</label>
 <textarea id="address" name="applicant_address"></textarea>
@@ -33,26 +33,23 @@
 <label for="email">Email:</label>
 <input type="email" id="email" name="applicant_email">
 
+<label for="email">Telephone Number:</label>
+<input type="tel" id="telephone" name="applicant_telephone">
+
+<label for="email">LinkedIn URL:</label>
+<input type="url" id="linkedin" name="applicant_linkedin" placeholder="http://">
+
 <label for="job">Current Occupation:</label>
 <select id="job" name="user_job">
-<optgroup label="Web">
-<option value="frontend_developer">Front-End Developer</option>
-<option value="php_developer">PHP Developer</option>
-<option value="python_developer">Python Developer</option>
-<option value="rails_developer">Rails Developer</option>
-<option value="web_designer">Web Designer</option>
-<option value="wordpress_developer">Wordpress Developer</option>
-</optgroup>
-
-<optgroup label="Mobile">
-<option value="android_developer">Android Developer</option>
-<option value="ios_developer">IOS Developer</option>
-<option value="mobile_designer">Mobile Designer</option>
-</optgroup>
-
-<optgroup label="Business">
-<option value="business_owner">Business Owner</option>
-<option value="freelancer">Freelancer</option>
+<optgroup label="Applicant Occupation">
+<option value="doctor_job">Doctor</option>
+<option value="doctor_job">Nurse</option>
+<option value="teacher_job">Teacher</option>
+<option value="Chef_job">Chef</option>
+<option value="web_job">Web Designer</option>
+<option value="graphic_job">Graphic Designer</option>
+<option value="Business_job">Business Owner</option>
+<option value="freelancer_job">Freelancer</option>
 </optgroup>
 </select>
 
@@ -65,11 +62,11 @@
 	
 <fieldset>
 <legend><span class="number">2</span> Type of Loan</legend>
-</fieldset>
+
 
 <label for="loantype">Type of Loan:</label>
 <select id="loantype" name="applicant_loan">
-<optgroup label="Choose Below">
+<optgroup label="Choose Below:">
 <option value="commercial_loan">Commercial Loan</option>
 <option value="real estate_loan">Real Estate Loan</option>
 <option value="personal_loan">Personal Loan</option>
@@ -77,18 +74,30 @@
 </optgroup>
 </select>
 
-<label for="special">Special Conditions:</label>
-<select id="special" name="applicant_special">
-<optgroup label="Choose one of the following:">
-<option value="downpayment_special">I have down payment</option>
-<option value="outofstate_special">I live out of state</option>
-<option value="married_special">I am married</option>
-<option value="cosigner_special">I need a co-signer</option>
-</optgroup>
-</select>
+<p>Special Conditions:
+	<br />
+	<input type="checkbox" name="condition" value="down_payment" checked="checked" /> Down Payment
+	<input type="checkbox" name="condition" value="out_state" /> Out of State
+	<input type="checkbox" name="condition" value="married" /> Married
+	<input type="checkbox" name="condition" value="cosigned" /> Co-Signed
+</p>
 
+<label for="amount">Loan Amount Requested:</label>
+<input type="number" id="amount" name="loan_amount" placeholder="$0.00">
 
-<button type="submit">Sign Up</button>
+<p>Loan Length:
+	<br />
+		<input type="radio" name="length" value="5_years" checked="checked" /> 5 years
+		<input type="radio" name="length" value="15_years" /> 15 years
+		<input type="radio" name="length" value="30_years" /> 30 years
+</p>
+		
+
+</fieldset>
+
+<div>
+<button type="submit">Submit</button>
+</div>
 
 </form>
 

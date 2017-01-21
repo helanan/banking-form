@@ -50,6 +50,18 @@ input[type="radio"],
 input[type="checkbox"] {
 }
 
+input:required:invalid, input:focus:invalid {
+  background-color: rgba(228, 5, 5, 0.58);
+  box-shadow: 0 0 3px 0px black;
+  -moz-box-shadow: none;
+}
+
+input:required:valid, input:focus:valid {
+  background-color: rgba(76, 175, 80, 0.57);
+  box-shadow: 0 0 3px 0px black;
+  -moz-box-shadow: none;
+}
+
 select {
   padding: 6px;
   height: 32px;
